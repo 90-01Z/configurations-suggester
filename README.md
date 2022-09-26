@@ -16,14 +16,14 @@ Options examinées pour chaque nomenclature :
 
 ### Département : 
 
-* [v] Pas de racinisation / lemmatisation 
-* [v] Recherche sur libellé ou sur code
-* [v] Démarre au début des mots (exemple Haute Loire, Loire)
-* [v] Recherche sur le début du code (exemple : si tu tapes 1, tu n'affiches pas 01, mais 10, 11 etc)
-* [v] Ordre affichage : ordre des codes
-* Recherche dès le premier caractère
-* Pondération : aucune
-* Stopwords : aucun
+* :white_check_mark: Pas de racinisation / lemmatisation 
+* :white_check_mark: Recherche sur libellé ou sur code
+* :white_check_mark: Démarre au début des mots (exemple Haute Loire, Loire)
+* :white_check_mark: Recherche sur le début du code (exemple : si tu tapes 1, tu n'affiches pas 01, mais 10, 11 etc)
+* :x: Ordre affichage : ordre des codes
+* :x: Recherche dès le premier caractère
+* :white_check_mark: Pondération : aucune
+* :white_check_mark: Stopwords : aucun
 
 
 #### Exemples
