@@ -2,9 +2,7 @@
 
 # Remarques
 - Temps de création de l'index : une vingtaine de secondes pour les 35993 communes
-- 
--
--
+
 
 
 Options examinées pour chaque nomenclature :
@@ -27,7 +25,7 @@ Options examinées pour chaque nomenclature :
 * :white_check_mark: Démarre au début des mots (exemple Haute Loire, Loire)
 * :white_check_mark: Recherche sur le début du code (exemple : si tu tapes 1, tu n'affiches pas 01, mais 10, 11 etc)
 * :white_check_mark: Ordre affichage : ordre des codes
-* :x: Recherche dès le premier caractère
+* :x: Recherche dès le premier caractère : ** A voir côté info s'il est possible de faire varier la règle de déclenchement de l'appel au suggester selon les nomenclatures **
 * :white_check_mark: Pondération : aucune
 * :white_check_mark: Stopwords : aucun
 
@@ -46,7 +44,7 @@ Options examinées pour chaque nomenclature :
 → `97`
 ← `971 972 973 974 976`
 
-:x: Haute Garonne apparaît avant car il n'y a pas de priorité sur le premier mot
+:x: Haute Garonne apparaît avant car il n'y a pas de priorité sur le premier mot ** Est-il possible de trier les echos selon la correspondance sur premier mot (voir ce qui se fait dans melauto) **
 → `g`
 ← `Gard Gers Gironde Guadeloupe Guyane Haute Garonne`
 
@@ -58,7 +56,7 @@ Plusieurs cas d'usage (pays de naissance, pays de résidence actuelle). On propo
 * :white_check_mark: Recherche sur libellé uniquement (code non signifiant)
 * :white_check_mark: Démarre au début de tous les mots 
 * :white_check_mark: Ordre affichage : ordre alphabétique des libellés
-* Recherche dès le premier caractère
+* :x: Recherche dès le premier caractère
 * :white_check_mark: Pondération : aucune
 * :white_check_mark: Stopwords : aucun
 
@@ -76,21 +74,21 @@ Prévoir Libellé = libellé commune + code département (car homonymes)
 * Ordre affichage ? sur storybook, ordre alphabétique des libellés mais plutot comme Mélauto (d'abord ceux qui commencent par les saisis puis ordre alphabétique)
 * Recherche dès le premier caractère
 * :white_check_mark: Pondération : aucune
-* :x: Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle : Fonctionne dans le story book mais je n'ai jamais été capable de le reproduire à partir de https://90-01z.github.io/lunatic-suggester/
+* :x: Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle : ** Fonctionne dans le story book mais je n'ai jamais été capable de le reproduire à partir de https://90-01z.github.io/lunatic-suggester/ **
 
 
 ## Hors géographie 
 
 ### PCS
-* Racinisation / lemmatisation
-* Recherche sur libellé uniquement
-* Démarre au début de tous les mots 
+* :white_check_mark: Racinisation / lemmatisation
+* :white_check_mark: Recherche sur libellé uniquement
+* :white_check_mark: Démarre au début de tous les mots 
 * :x: Ordre affichage ? Melauto actuel (d'abord ceux qui commencent par les caractères saisis puis ordre alphabétique pour les autres) 
-* Recherche à partir de 3 caractères  
-* Pondération : aucune ou à voir ce qui est possible
-* Synonymes : aucun
+* :x: Recherche à partir de 3 caractères  
+* :white_check_mark: Pondération : aucune ou à voir ce qui est possible
+* :white_check_mark: Synonymes : aucun
 * Stopwords standards : 'de', 'le', la', 'les', 'du', 'et',  'au', 'aux', 'en' (+ voir la liste constituée par Théo)
-* en cas d'une saisie "multimots" : afficher d'abord dans la liste des échos ceux qui ont tous les token, puis n-1 etc..
+* :white_check_mark: en cas d'une saisie "multimots" : afficher d'abord dans la liste des échos ceux qui ont tous les token, puis n-1 etc..
 
 
 ### Diplôme ?
