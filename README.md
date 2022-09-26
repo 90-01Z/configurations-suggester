@@ -25,7 +25,7 @@ Options examinées pour chaque nomenclature :
 * :white_check_mark: Démarre au début des mots (exemple Haute Loire, Loire)
 * :white_check_mark: Recherche sur le début du code (exemple : si tu tapes 1, tu n'affiches pas 01, mais 10, 11 etc)
 * :white_check_mark: Ordre affichage : ordre des codes
-* :x: Recherche dès le premier caractère : ** A voir côté info s'il est possible de faire varier la règle de déclenchement de l'appel au suggester selon les nomenclatures **
+* :x: Recherche dès le premier caractère :**A voir côté info s'il est possible de faire varier la règle de déclenchement de l'appel au suggester selon les nomenclatures**
 * :white_check_mark: Pondération : aucune
 * :white_check_mark: Stopwords : aucun
 
@@ -44,7 +44,7 @@ Options examinées pour chaque nomenclature :
 → `97`
 ← `971 972 973 974 976`
 
-:x: Haute Garonne apparaît avant car il n'y a pas de priorité sur le premier mot ** Est-il possible de trier les echos selon la correspondance sur premier mot (voir ce qui se fait dans melauto) **
+:x: Haute Garonne apparaît avant car il n'y a pas de priorité sur le premier mot**Est-il possible de trier les echos selon la correspondance sur premier mot (voir ce qui se fait dans melauto)**
 → `g`
 ← `Gard Gers Gironde Guadeloupe Guyane Haute Garonne`
 
@@ -74,7 +74,7 @@ Prévoir Libellé = libellé commune + code département (car homonymes)
 * Ordre affichage ? sur storybook, ordre alphabétique des libellés mais plutot comme Mélauto (d'abord ceux qui commencent par les saisis puis ordre alphabétique)
 * Recherche dès le premier caractère
 * :white_check_mark: Pondération : aucune
-* :x: Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle : ** Fonctionne dans le story book mais je n'ai jamais été capable de le reproduire à partir de https://90-01z.github.io/lunatic-suggester/ **
+* :x: Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle :**Fonctionne dans le story book mais je n'ai jamais été capable de le reproduire à partir de https://90-01z.github.io/lunatic-suggester/**
 
 
 ## Hors géographie 
