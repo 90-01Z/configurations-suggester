@@ -1,0 +1,25 @@
+{
+  "name": "commune",
+  "fields": [
+    {
+     "name": "label",
+     "rules": ["[\\w]+"],
+     "synonyms": [
+                {
+                 "saint": ["st"],
+                 "st": ["saint"]
+                }
+              ],
+     "stemmer": false
+ }
+  ],
+  "queryParser": {
+    "type": "tokenized",
+    "params": {
+      "pattern": "[\\w]+",
+      "min": 1,
+      "stemmer": false
+    }
+  },
+  "version": "1"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "departement",
+  "fields": [
+    {
+      "name": "label",
+      "rules": [
+        "[\\w]+"
+      ],
+      "language": "French",
+      "min": 2,
+      "stemmer": false
+    },
+    {
+      "name": "id"
+    }
+  ],
+  "queryParser": {
+    "type": "tokenized",
+    "params": {
+      "language": "French",
+      "pattern": "[\\w.]+",
+      "min": 1,
+      "stemmer": false
+    }
+  },
+  "version": "1"
+}

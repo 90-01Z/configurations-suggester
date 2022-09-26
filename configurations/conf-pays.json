@@ -1,0 +1,13 @@
+{
+  "name": "pays",
+  "fields": [
+    {
+      "name": "label",
+      "rules": "soft"
+    }
+  ],
+  "queryParser": {
+    "type": "soft"
+  },
+  "version": "1"
+}

@@ -1,5 +1,11 @@
 # Codification - 20 juillet 2022
 
+# Remarques
+- Temps de création de l'index : une vingtaine de secondes pour les 35993 communes
+- 
+-
+-
+
 
 Options examinées pour chaque nomenclature :
 * Lemmatisation (donner à un mot sa forme neutre canonique - https://fr.wikipedia.org/wiki/Lemmatisation)
@@ -20,7 +26,7 @@ Options examinées pour chaque nomenclature :
 * :white_check_mark: Recherche sur libellé ou sur code
 * :white_check_mark: Démarre au début des mots (exemple Haute Loire, Loire)
 * :white_check_mark: Recherche sur le début du code (exemple : si tu tapes 1, tu n'affiches pas 01, mais 10, 11 etc)
-* :x: Ordre affichage : ordre des codes
+* :white_check_mark: Ordre affichage : ordre des codes
 * :x: Recherche dès le premier caractère
 * :white_check_mark: Pondération : aucune
 * :white_check_mark: Stopwords : aucun
@@ -28,15 +34,19 @@ Options examinées pour chaque nomenclature :
 
 #### Exemples
 
+:white_check_mark:
 → `0`
 ← `01 02 03 04 05 06 07 08 09`
 
+:white_check_mark:
 → `9`
 ← `90 91 92 93 94 95 971 972 973 974 976`
 
+:white_check_mark:
 → `97`
 ← `971 972 973 974 976`
 
+:x: Haute Garonne apparaît avant car il n'y a pas de priorité sur le premier mot
 → `g`
 ← `Gard Gers Gironde Guadeloupe Guyane Haute Garonne`
 
@@ -44,13 +54,13 @@ Options examinées pour chaque nomenclature :
 ### Pays
 Plusieurs cas d'usage (pays de naissance, pays de résidence actuelle). On propose que les critères de recherche soient les mêmes mais qu'on ait des listes différentes en fonction des cas d'usage (eg pays de naissance => liste historique VS pays dans lequel on vit actuellement => liste actuelle ou millésimée)
 
-* Pas de racinisation / lemmatisation
-* Recherche sur libellé uniquement (code non signifiant)
-* Démarre au début de tous les mots 
-* Ordre affichage : ordre alphabétique des libellés
+* :white_check_mark: Pas de racinisation / lemmatisation
+* :white_check_mark: Recherche sur libellé uniquement (code non signifiant)
+* :white_check_mark: Démarre au début de tous les mots 
+* :white_check_mark: Ordre affichage : ordre alphabétique des libellés
 * Recherche dès le premier caractère
-* Pondération : aucune
-* Stopwords : aucun
+* :white_check_mark: Pondération : aucune
+* :white_check_mark: Stopwords : aucun
 
 
 Besoin d'une liste Millésimée probablement
@@ -60,13 +70,13 @@ Besoin d'une liste Millésimée probablement
 ### Commune
 Prévoir Libellé = libellé commune + code département (car homonymes)
 
-* Pas de racinisation / lemmatisation
-* Recherche sur libellé uniquement
-* Démarre au début de tous les mots 
+* :white_check_mark: Pas de racinisation / lemmatisation
+* :white_check_mark: Recherche sur libellé uniquement
+* :white_check_mark: Démarre au début de tous les mots 
 * Ordre affichage ? sur storybook, ordre alphabétique des libellés mais plutot comme Mélauto (d'abord ceux qui commencent par les saisis puis ordre alphabétique)
 * Recherche dès le premier caractère
-* Pondération : aucune
-* Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle 
+* :white_check_mark: Pondération : aucune
+* :x: Synonymes : St/Saint et Sainte/Ste  (voire les 4 ?), s/s sous, ou autre abréviation habituelle : Fonctionne dans le story book mais je n'ai jamais été capable de le reproduire à partir de https://90-01z.github.io/lunatic-suggester/
 
 
 ## Hors géographie 
@@ -75,7 +85,7 @@ Prévoir Libellé = libellé commune + code département (car homonymes)
 * Racinisation / lemmatisation
 * Recherche sur libellé uniquement
 * Démarre au début de tous les mots 
-* Ordre affichage ? Melauto actuel (d'abord ceux qui commencent par les caractères saisis puis ordre alphabétique pour les autres) 
+* :x: Ordre affichage ? Melauto actuel (d'abord ceux qui commencent par les caractères saisis puis ordre alphabétique pour les autres) 
 * Recherche à partir de 3 caractères  
 * Pondération : aucune ou à voir ce qui est possible
 * Synonymes : aucun
