@@ -1,8 +1,16 @@
 # Codification - 20 juillet 2022
 
-# Remarques
-- Temps de création de l'index : une vingtaine de secondes pour les 35993 communes
+### Questions :
 
+- Quel traitement est fait sur la requête, par exemple, lorsqu'il y a des accents dans la requête, le caractère semble supprimer (au lieu de ne supprimer que l'accent), par exemple si je tape élec, le premier echo est lecteur-correcteur
+- Il faudrait éviter de compter plusieurs occurences d'un même token (ex : Electronique, electrotechnique ; plusieurs occurrence de "de")
+- Est-ce que le temps de création de l'index peut poser un problème (par exemple s'il est reconstuit à chaque chargement de l'appli). Ca met par exemple une vingtaine de secondes pour les 35993 communes. Pour Emploi du temps, on aura sans doute une problématique de volume
+- Il faudrait implémenter la même règle de classement que sur melauto (privilégier les libellés dont tous les tokens matchent, puis ceux dont le premier token matche)
+- Je n'arrive pas à mettre en place de synonymes, ça semble marcher dans le storyboard, mais j'ai tout tenté en local, je n'y arrive pas)
+
+- Possibilités de faire plusieurs règles sur le même label (simulé en définissant deux labels identiques)
+- Impossibilité de découper en ngram (mais pas forcément utile)
+- Voir s'il y a besoin de toucher au code pour faire varier la règle de déclenchement de l'appel au suggester selon les nomenclatures
 
 
 Options examinées pour chaque nomenclature :
